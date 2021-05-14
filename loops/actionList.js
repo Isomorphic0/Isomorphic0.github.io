@@ -4137,6 +4137,7 @@ Action.TheSpire = new DungeonAction("The Spire", 2, {
     type: "multipart",
     expMult: 1,
     townNum: 5,
+    varName: "Spire",
     stats: {
         Str: 0.1,
         Dex: 0.1,
@@ -4155,20 +4156,20 @@ Action.TheSpire = new DungeonAction("The Spire", 2, {
         return 2000;
     },
     canStart() {
-        const curFloor = Math.floor((towns[this.townNum].SDungeonLoopCounter) / this.segments + 0.0000001);
+        const curFloor = Math.floor((towns[this.townNum].SpireLoopCounter) / this.segments + 0.0000001);
         return resources.reputation >= 2 && curFloor < dungeons[this.dungeonNum].length;
     },
     loopCost(segment) {
-        return precision3(Math.pow(2, Math.floor((towns[this.townNum].SDungeonLoopCounter + segment) / this.segments + 0.0000001)) * 15000);
+        return precision3(Math.pow(2, Math.floor((towns[this.townNum].SpireLoopCounter + segment) / this.segments + 0.0000001)) * 15000);
     },
     tickProgress(offset) {
-        const floor = Math.floor((towns[this.townNum].SDungeonLoopCounter) / this.segments + 0.0000001);
+        const floor = Math.floor((towns[this.townNum].SpireLoopCounter) / this.segments + 0.0000001);
         return (getSelfCombat() + getSkillLevel("Magic")) *
-        (1 + getLevel(this.loopStats[(towns[this.townNum].SDungeonLoopCounter + offset) % this.loopStats.length]) / 100) *
+        (1 + getLevel(this.loopStats[(towns[this.townNum].SpireLoopCounter + offset) % this.loopStats.length]) / 100) *
         Math.sqrt(1 + dungeons[this.dungeonNum][floor].completed / 200);
     },
     loopsFinished() {
-        const curFloor = Math.floor((towns[this.townNum].SDungeonLoopCounter) / this.segments + 0.0000001 - 1);
+        const curFloor = Math.floor((towns[this.townNum].SpireLoopCounter) / this.segments + 0.0000001 - 1);
         const success = finishDungeon(this.dungeonNum, curFloor);
         if (success === true && storyMax <= 1) {
             unlockGlobalStory(1);
