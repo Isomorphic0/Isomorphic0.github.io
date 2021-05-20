@@ -646,25 +646,25 @@ function View() {
             document.getElementById("townViewRight").style.visibility = "visible";
         }
 	    
-	if ((townNum == 3) && (Town(4).unlocked())) {
+	if ((townNum == 3) && (townsUnlocked.includes(4))) {
 		document.getElementById("townViewUpRight").style.visibility = "visible";
         } else {
             document.getElementById("townViewUpRight").style.visibility = "hidden";
         }
 	    
-	if ((townNum == 3) && (Town(5).unlocked())) {
+	if ((townNum == 3) && (townUnlocked.includes(5))) {
 		document.getElementById("townViewDownRight").style.visibility = "visible";
         } else {
             document.getElementById("townViewDownRight").style.visibility = "hidden";
         }
 	 
-	if ((townNum == 6 && Town(4).unlocked()) || (townNum == 5 && Town(6).unlocked())) {
+	if ((townNum == 6 && townsUnlocked.includes(4)) || (townNum == 5 && townsUnlocked.includes(6))) {
 		document.getElementById("townViewUp").style.visibility = "visible";
         } else {
             document.getElementById("townViewUp").style.visibility = "hidden";
         }
 	    
-	if ((townNum == 4 && Town(6).unlocked()) || (townNum == 6 && Town(5).unlocked())) {
+	if ((townNum == 4 && townsUnlocked.includes(6)) || (townNum == 6 && townsUnlocked.includes(5))) {
 		document.getElementById("townViewDown").style.visibility = "visible";
         } else {
             document.getElementById("townViewDown").style.visibility = "hidden";
