@@ -652,7 +652,7 @@ function View() {
             document.getElementById("townViewUpRight").style.visibility = "hidden";
         }
 	    
-	if ((townNum == 3) && (townUnlocked.includes(5))) {
+	if ((townNum == 3) && (townsUnlocked.includes(5))) {
 		document.getElementById("townViewDownRight").style.visibility = "visible";
         } else {
             document.getElementById("townViewDownRight").style.visibility = "hidden";
