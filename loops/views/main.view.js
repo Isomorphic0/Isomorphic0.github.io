@@ -603,6 +603,34 @@ function View() {
         }
     };
 
+	
+    this.showNextTown = function() {
+	    if (townShowing < 3) {
+		    showTown(townShowing + 1);
+	    }
+	    if (townShowing == 3) {
+		    showTown(6);
+	    }
+    };
+
+    this.showUpTown = function() {
+	    if (townShowing == 5) {
+		    showTown(6);
+	    }
+	    if (townShowing == 6) {
+		    showTown(4);
+	    }
+    };
+	
+    this.showDownTown = function() {
+	    if (townShowing == 4) {
+		    showTown(6);
+	    }
+	    if (townShowing == 6) {
+		    showTown(5);
+	    }
+    };
+	
     this.showTown = function(townNum) {
         if (!towns[townNum].unlocked()) return;
 
@@ -612,11 +640,35 @@ function View() {
             document.getElementById("townViewLeft").style.visibility = "visible";
         }
 
-        if (townNum === Math.max(...townsUnlocked)) {
+        if ((townNum === Math.max(...townsUnlocked))||(townNum > 3)) {
             document.getElementById("townViewRight").style.visibility = "hidden";
         } else {
             document.getElementById("townViewRight").style.visibility = "visible";
         }
+	    
+	if townNum == 3 && Town(4).unlocked() {
+		document.getElementById("townViewUpRight").style.visibility = "visible";
+        } else {
+            document.getElementById("townViewUpRight").style.visibility = "hidden";
+        }
+	    
+	if townNum == 3 && Town(5).unlocked() {
+		document.getElementById("townViewDownRight").style.visibility = "visible";
+        } else {
+            document.getElementById("townViewDownRight").style.visibility = "hidden";
+        }
+	 
+	if (townNum == 6 && Town(4).unlocked()) || (townNum == 5 && Town(6).unlocked()) {
+		document.getElementById("townViewUp").style.visibility = "visible";
+        } else {
+            document.getElementById("townViewUp").style.visibility = "hidden";
+        }
+	    
+	if (townNum == 4 && Town(6).unlocked()) || (townNum == 6 && Town(5).unlocked()) {
+		document.getElementById("townViewDown").style.visibility = "visible";
+        } else {
+            document.getElementById("townViewDown").style.visibility = "hidden";
+        }	
 
         for (let i = 0; i < actionOptionsTown.length; i++) {
             actionOptionsTown[i].style.display = "none";
