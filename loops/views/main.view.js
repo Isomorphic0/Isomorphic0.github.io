@@ -612,6 +612,15 @@ function View() {
 		    showTown(6);
 	    }
     };
+	
+    this.showPrevTown = function() {
+	    if (townShowing < 5) {
+		    showTown(math.max(0,townShowing - 1));
+	    }
+	    else {
+		    showTown(3);
+	    }
+    };
 
     this.showUpTown = function() {
 	    if (townShowing == 5) {
