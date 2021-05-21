@@ -656,7 +656,7 @@ function View() {
         }
 	
 	if (townNum == 3) {
-	    if (townsUnlocked.includes(6) {
+	    if (townsUnlocked.includes(6)) {
 		document.getElementById("townViewRight").style.visibility = "visible";
 	    } else {
 	        document.getElementById("townViewRight").style.visibility = "hidden";
