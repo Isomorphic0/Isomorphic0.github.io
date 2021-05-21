@@ -288,7 +288,7 @@ function load() {
     } else {
         townsUnlocked = toLoad.townsUnlocked === undefined ? [0] : toLoad.townsUnlocked;
     }
-    for (let i = 0; i < 6; i++) {
+    for (let i = 0; i < 7; i++) {
         towns[i] = new Town(i);
     }
     actionTownNum = toLoad.actionTownNum === undefined ? 0 : toLoad.actionTownNum;
