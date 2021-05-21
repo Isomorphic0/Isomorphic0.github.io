@@ -295,12 +295,12 @@
             <div style="float:right;margin-right:150px;visibility: hidden;" class="actionIcon fa fa-arrow-right fa-rotate-315" id="townViewUpRight" onclick="view.showTown(4)"></div>
         </div><br>
         <div id="townWindow" style="width:100%;text-align:center;">
-            <div style="float:left;margin-left:150px;" class="actionIcon fa fa-arrow-left" id="townViewLeft" onclick="view.showTown(townsUnlocked[townsUnlocked.indexOf(townShowing)-1])"></div>
+            <div style="float:left;margin-left:150px;" class="actionIcon fa fa-arrow-left" id="townViewLeft" onclick="view.showPrevTown()"></div>
             <div class="showthat">
                 <div class="large bold"><div class="bold" id="townName"></div></div>
                 <div id='townDesc' class='showthis'></div>
             </div>
-            <div style="float:right;margin-right:150px;" class="actionIcon fa fa-arrow-right" id="townViewRight" onclick="view.showTown(townsUnlocked[townsUnlocked.indexOf(townShowing)+1])"></div>
+            <div style="float:right;margin-right:150px;" class="actionIcon fa fa-arrow-right" id="townViewRight" onclick="view.showNextTown()"></div>
         </div><br>
         <div id="townDownArrows" style=width:100%;">
             <div style="float:left;margin-left:261px;visibility: hidden;" class="actionIcon fa fa-arrow-down" id="townViewDown" onclick="view.showDownTown()"></div>
