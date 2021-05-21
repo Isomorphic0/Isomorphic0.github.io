@@ -606,37 +606,37 @@ function View() {
 	
     this.showNextTown = function() {
 	    if (townShowing < 3) {
-		    showTown(townShowing + 1);
+		    this.showTown(townShowing + 1);
 	    }
 	    if (townShowing == 3) {
-		    showTown(6);
+		    this.showTown(6);
 	    }
     };
 	
     this.showPrevTown = function() {
 	    if (townShowing < 5) {
-		    showTown(math.max(0,townShowing - 1));
+		    this.showTown(math.max(0,townShowing - 1));
 	    }
 	    else {
-		    showTown(3);
+		    this.showTown(3);
 	    }
     };
 
     this.showUpTown = function() {
 	    if (townShowing == 5) {
-		    showTown(6);
+		    this.showTown(6);
 	    }
 	    if (townShowing == 6) {
-		    showTown(4);
+		    this.showTown(4);
 	    }
     };
 	
     this.showDownTown = function() {
 	    if (townShowing == 4) {
-		    showTown(6);
+		    this.showTown(6);
 	    }
 	    if (townShowing == 6) {
-		    showTown(5);
+		    this.showTown(5);
 	    }
     };
 	
