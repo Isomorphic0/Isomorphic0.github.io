@@ -730,9 +730,13 @@
             <desc>A sprawling and jolly city filled with all manner of nice things. Vikings, beer, angels, beer, blah blah blah, and beer! You can spend your time in the great hall, or in the outskirts of the city. Either way, you'll surely have a great time.</desc>
         </town4>
         <town5>
+            <name>Shadow Realm</name>
+            <desc>Placeholder description</desc>
+        </town5>
+        <town6>
             <name>Adeptsville</name>
             <desc>A once familiar place, now crawling with shadows and ominous feelings of wasted sick days. There stands a large pillar of gloomy purple light in the center of it all, eminating from a spire surrounded by black clouds. It's emitting 10 weak beams of purple light to various points around the town, and appears to be casting all the shadows. Maybe you should check those spots out.</desc>
-        </town5>
+        </town6>
     </towns>
     <talents>
         <calculated_shattering>
