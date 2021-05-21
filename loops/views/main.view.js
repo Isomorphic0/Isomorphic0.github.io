@@ -615,7 +615,7 @@ function View() {
 	
     this.showPrevTown = function() {
 	    if (townShowing < 5) {
-		    this.showTown(math.max(0,townShowing - 1));
+		    this.showTown(Math.max(0,townShowing - 1));
 	    }
 	    else {
 		    this.showTown(3);
