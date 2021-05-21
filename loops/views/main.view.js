@@ -654,6 +654,14 @@ function View() {
         } else {
             document.getElementById("townViewRight").style.visibility = "visible";
         }
+	
+	if (townNum == 3) {
+	    if (townsUnlocked.includes(6) {
+		document.getElementById("townViewRight").style.visibility = "visible";
+	    } else {
+	        document.getElementById("townViewRight").style.visibility = "hidden";
+	    }
+        }
 	    
 	if ((townNum == 3) && (townsUnlocked.includes(4))) {
 		document.getElementById("townViewUpRight").style.visibility = "visible";
