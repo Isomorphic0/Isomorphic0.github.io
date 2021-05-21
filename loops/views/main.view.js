@@ -607,8 +607,7 @@ function View() {
     this.showNextTown = function() {
 	    if (townShowing < 3) {
 		    this.showTown(townShowing + 1);
-	    }
-	    if (townShowing == 3) {
+	    } else if (townShowing == 3) {
 		    this.showTown(6);
 	    }
     };
@@ -616,8 +615,7 @@ function View() {
     this.showPrevTown = function() {
 	    if (townShowing < 5) {
 		    this.showTown(Math.max(0,townShowing - 1));
-	    }
-	    else {
+	    } else {
 		    this.showTown(3);
 	    }
     };
@@ -625,8 +623,7 @@ function View() {
     this.showUpTown = function() {
 	    if (townShowing == 5) {
 		    this.showTown(6);
-	    }
-	    if (townShowing == 6) {
+	    } else if (townShowing == 6) {
 		    this.showTown(4);
 	    }
     };
@@ -634,8 +631,7 @@ function View() {
     this.showDownTown = function() {
 	    if (townShowing == 4) {
 		    this.showTown(6);
-	    }
-	    if (townShowing == 6) {
+	    } else if (townShowing == 6) {
 		    this.showTown(5);
 	    }
     };
