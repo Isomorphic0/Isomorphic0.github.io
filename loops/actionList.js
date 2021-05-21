@@ -3362,9 +3362,9 @@ Action.FaceJudgement = new Action("Face Judgement", {
 		}
         else if (resources.reputation <= -50) {
 			unlockStory("castIntoShadowRealm");
-			unlockTown(0);
+			unlockTown(5);
 		}
-		else unlockTown(5);
+		else unlockTown(6);
     },
 });
 
@@ -3382,12 +3382,13 @@ Action.GuidedTour = new Action("Guided Tour", {
         Int: 0.1,
         Luck: 0.1
     },
-	canStart() {
-		return resources.gold >= 10;
-	},
-	cost() {
-		addResource("gold", -10);
-	},
+    affectedBy: ["Buy Glasses"],
+    canStart() {
+	return resources.gold >= 10;
+    },
+    cost() {
+	addResource("gold", -10);
+    },
     manaCost() {
         return 2500;
     },
@@ -4133,10 +4134,38 @@ Action.FallFromGrace = new Action("Fall From Grace", {
 
 // town 6
 
+Action.ExploreShadow = new Action("Explore Shadow Realm", {
+    type: "progress",
+    expMult: 1,
+    townNum: 5,
+    varName: "ExploreShadow",
+	
+    stats: {
+        Dex: 0.1,
+        Con: 0.4,
+        Per: 0.4,
+        Spd: 0.1
+    },
+    affectedBy: ["Buy Glasses"],
+    manaCost() {
+        return 3500;
+    },
+    visible() {
+        return true;
+    },
+    unlocked() {
+        return true;
+    },
+    finish() {
+        towns[5].finishProgress(this.varName, 100 * (resources.glasses ? 2 : 1));
+    },
+});
+
+// town 7
 Action.TheSpire = new DungeonAction("The Spire", 2, {
     type: "multipart",
     expMult: 1,
-    townNum: 5,
+    townNum: 6,
     varName: "Spire",
     stats: {
         Str: 0.1,
