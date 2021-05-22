@@ -986,7 +986,7 @@ const Koviko = {
       }
 
       var Affec = affected.map(name => {
-        if ( resources[name] != 0 ) return `<li class=\${name}>\${resources[name]}</li>`;
+        if ( resources[name] != 0 ) return `<li class=${name}>${resources[name]}</li>`;
         else return "";
       }).join('');
       return `<ul class='koviko ${isValid}'>` + Affec + `</ul><div class='koviko showthis'><table>${tooltip || '<b>N/A</b>'}</table></div>`;
@@ -1106,7 +1106,7 @@ const Koviko = {
         try {
           Koviko.globals[varName] = eval(varName);
         } catch (e) {
-          console.error(`Unable to retrieve global '\${varName}'.`);
+          console.error(`Unable to retrieve global '${varName}'.`);
           Koviko.hasRan = false;
           return;
         }
