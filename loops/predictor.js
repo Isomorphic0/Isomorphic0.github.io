@@ -380,7 +380,7 @@ const Koviko = {
       .actionOptions .showthis {width:max-content;bottom:100%;max-width:400px;margin-bottom:5px;}
       .travelContainer, .actionContainer {position:relative;}
       `;
-      document.getElementById("actionsColumn").style.width="500px";
+      document.getElementById("actionsColumn").style.width="700px";
 
       // Create the <style> element if it doesn't already exist
       if (!style || style.tagName.toLowerCase() !== 'style') {
