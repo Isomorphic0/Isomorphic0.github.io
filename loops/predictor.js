@@ -379,7 +379,7 @@ const Koviko = {
       ul.koviko .mind{color:#006400}
       .actionOptions .showthis {width:max-content;bottom:100%;max-width:400px;margin-bottom:5px;}
       .travelContainer, .actionContainer {position:relative;}
-      \`;
+      \``;
       document.getElementById("actionsColumn").style.width="500px";
 
       // Create the <style> element if it doesn't already exist
@@ -918,7 +918,7 @@ const Koviko = {
             end: Koviko.globals.getLevelFromExp(stats[i].value),
           };
 
-          tooltip += '<tr><td><b>' + _txt(\`stats>\${i}>short_form\`).toUpperCase() + '</b></td><td>' + intToString(level.end, 1) + '</td><td>(+' + intToString(level.end - level.start, 1) + ')</td></tr>';
+          tooltip += '<tr><td><b>' + _txt(\`stats>\${i}>short_form\``).toUpperCase() + '</b></td><td>' + intToString(level.end, 1) + '</td><td>(+' + intToString(level.end - level.start, 1) + ')</td></tr>';
         }
       }
 
@@ -988,10 +988,10 @@ const Koviko = {
       }
 
       var Affec = affected.map(name => {
-        if ( resources[name] != 0 ) return \`<li class=\${name}>\${resources[name]}</li>\`;
+        if ( resources[name] != 0 ) return \`<li class=\${name}>\${resources[name]}</li>\``;
         else return "";
       }).join('');
-      return \`<ul class='koviko \${isValid}'>\` + Affec + \`</ul><div class='koviko showthis'><table>\${tooltip || '<b>N/A</b>'}</table></div>\`;
+      return \`<ul class='koviko \${isValid}'>\` + Affec + \`</ul><div class='koviko showthis'><table>\${tooltip || '<b>N/A</b>'}</table></div>\``;
     };
 
     /**
@@ -1108,7 +1108,7 @@ const Koviko = {
         try {
           Koviko.globals[varName] = eval(varName);
         } catch (e) {
-          console.error(\`Unable to retrieve global '\${varName}'.\`);
+          console.error(\`Unable to retrieve global '\${varName}'.\``);
           Koviko.hasRan = false;
           return;
         }
