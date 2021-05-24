@@ -441,6 +441,7 @@ input[type="number"] {
 
 #nextActionsListContainer {
     width: auto;
+    min-width: 250px;
     height: 100%;
     background-color: #cdded2;
     vertical-align: top;
@@ -467,7 +468,6 @@ input[type="number"] {
 .nextActionContainer {
     justify-content: space-between;
     width: auto;
-    min-width: 300px;
     height: 20px;
     padding:0 4px;
 }
