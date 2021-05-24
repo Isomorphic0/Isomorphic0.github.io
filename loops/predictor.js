@@ -392,7 +392,8 @@ const Koviko = {
       // Clean out the <style> element and append the correct CSS
       for (; style.lastChild; style.removeChild(style.lastChild));
       style.appendChild(document.createTextNode(css));
-    } */
+      */
+    } 
 
     /**
      * Build the element that shows the total mana required by the action list.
