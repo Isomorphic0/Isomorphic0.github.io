@@ -351,7 +351,7 @@ const Koviko = {
       let style = document.getElementById('koviko');
 
       // Build the CSS
-      let css = `
+      /* let css = `
       .nextActionContainer{width:auto!important;padding:0 4px}
       #nextActionsList{height:100%!important; overflow-y:scroll;}
       #curActionsListContainer{width:122.5px !important; z-index: 100;}
@@ -392,7 +392,7 @@ const Koviko = {
       // Clean out the <style> element and append the correct CSS
       for (; style.lastChild; style.removeChild(style.lastChild));
       style.appendChild(document.createTextNode(css));
-    }
+    } */
 
     /**
      * Build the element that shows the total mana required by the action list.
