@@ -362,7 +362,7 @@ function View() {
                 >
                     <div><img src='img/${camelize(action.name)}.svg' class='smallIcon imageDragFix'> x 
                     <div class='bold'>${actionLoops}</div></div>
-                    <div style='float:right; margin-top: 1px; margin-right: 3px;'>
+                    <div style='float:right; margin-top: 1px; margin-left: 10px; margin-right: 3px;'>
                         ${capButton}
                         ${isSingular ? "" : `<i id='plusButton${i}' onclick='addLoop(${i})' class='actionIcon fas fa-plus'></i>`}
                         ${isSingular ? "" : `<i id='minusButton${i}' onclick='removeLoop(${i})' class='actionIcon fas fa-minus'></i>`}
