@@ -479,7 +479,7 @@ function View() {
         if (isShowing) curActionShowing = index;
         else curActionShowing = undefined;
         const div = document.getElementById(`action${index}Selected`);
-	nextActionWidth = (nextActionsDiv.style.display == "inline-block") ? nextActionDiv.offsetWidth : nextActionWidth;
+	var nextActionWidth = (nextActionsDiv.style.display == "inline-block") ? nextActionDiv.offsetWidth : nextActionWidth;
         if (div) {
 	    document.getElementById(`actionTooltipContainer`).style.width = nextActionWidth;
             div.style.opacity = isShowing ? "1" : "0";
