@@ -479,9 +479,9 @@ function View() {
         if (isShowing) curActionShowing = index;
         else curActionShowing = undefined;
         const div = document.getElementById(`action${index}Selected`);
-	var nextActionWidth = (nextActionsDiv.style.display == "inline-block") ? nextActionDiv.offsetWidth : nextActionWidth;
+	    var nextActionWidth = (nextActionsDiv.style.display == "inline-block") ? nextActionsDiv.offsetWidth : nextActionWidth;
         if (div) {
-	    document.getElementById(`actionTooltipContainer`).style.width = nextActionWidth;
+		document.getElementById(`actionTooltipContainer`).style.width = nextActionWidth;
             div.style.opacity = isShowing ? "1" : "0";
             document.getElementById(`actionTooltip${index}`).style.display = isShowing ? "inline-block" : "none";
         }
