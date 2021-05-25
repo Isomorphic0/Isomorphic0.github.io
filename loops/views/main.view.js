@@ -481,11 +481,11 @@ function View() {
         const div = document.getElementById(`action${index}Selected`);
 	    var nextActionWidth = (nextActionsDiv.style.display == "inline-block") ? nextActionsDiv.offsetWidth : nextActionWidth;
         if (div) {
-		document.getElementById(`actionTooltipContainer`).style.width = nextActionWidth;
             div.style.opacity = isShowing ? "1" : "0";
             document.getElementById(`actionTooltip${index}`).style.display = isShowing ? "inline-block" : "none";
         }
         nextActionsDiv.style.display = isShowing ? "none" : "inline-block";
+	document.getElementById(`actionTooltipContainer`).style.width = nextActionWidth;
         document.getElementById("actionTooltipContainer").style.display = isShowing ? "inline-block" : "none";
         view.updateCurrentActionBar(index);
     };
