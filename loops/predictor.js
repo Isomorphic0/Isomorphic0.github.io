@@ -875,10 +875,15 @@ const Koviko = {
       let totalTime = ('0' + h).slice(-2) + ":" + ('0' + m).slice(-2) + ":" + ('0' + s).slice(-2) + "." + ms;
       let dungeonEquilibrium = Math.sqrt(total / 200000);
       let dungeonSoulStones = 0;
+	    console.log(dungeonSoulStones);
       if ( !(Number.isNaN(snapshots.currProgress.attributes["Small Dungeon"].value)) ) { dungeonSoulStones += snapshots.currProgress.attributes["Small Dungeon"].value };
+	    console.log(dungeonSoulStones);
 	    console.log(Number.isNaN(snapshots.currProgress.attributes["Small Dungeon"].value));
+	    console.log(snapshots.currProgress.attributes["Small Dungeon"].value);
       if ( !(Number.isNaN(snapshots.currProgress.attributes["Large Dungeon"].value)) ) { dungeonSoulStones += snapshots.currProgress.attributes["Large Dungeon"].value * 10 };
-	    console.log(Number.isNaN(snapshots.currProgress.attributes["Small Dungeon"].value));
+	    console.log(dungeonSoulStones);
+	    console.log(Number.isNaN(snapshots.currProgress.attributes["Large Dungeon"].value));
+	    console.log(snapshots.currProgress.attributes["Small Dungeon"].value);
       // let dungeonSoulStones = snapshots.currProgress.attributes["Small Dungeon"].value + snapshots.currProgress.attributes["Large Dungeon"].value * 10;
       let expectedSoulStones = dungeonEquilibrium * dungeonSoulStones + this.predictions["Mine Soulstones"].loopsCompleted;
       let soulStonesPerMinute = expectedSoulStones / totalTicks * 60;
