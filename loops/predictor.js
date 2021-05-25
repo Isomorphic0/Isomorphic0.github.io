@@ -875,8 +875,8 @@ const Koviko = {
       let totalTime = ('0' + h).slice(-2) + ":" + ('0' + m).slice(-2) + ":" + ('0' + s).slice(-2) + "." + ms;
       let dungeonEquilibrium = Math.sqrt(total / 200000);
       let dungeonSoulStones = 0;
-      if ( !(snapshots.currProgress.attributes["Small Dungeon"].value) === undefined ) { dungeonSoulStones += snapshots.currProgress.attributes["Small Dungeon"].value };
-      if ( !(snapshots.currProgress.attributes["Large Dungeon"].value) === undefined ) { dungeonSoulStones += snapshots.currProgress.attributes["Large Dungeon"].value * 10 };
+      if ( !((snapshots.currProgress.attributes["Small Dungeon"].value) === undefined) ) { dungeonSoulStones += snapshots.currProgress.attributes["Small Dungeon"].value };
+      if ( !((snapshots.currProgress.attributes["Large Dungeon"].value) === undefined) ) { dungeonSoulStones += snapshots.currProgress.attributes["Large Dungeon"].value * 10 };
       // let dungeonSoulStones = snapshots.currProgress.attributes["Small Dungeon"].value + snapshots.currProgress.attributes["Large Dungeon"].value * 10;
       let expectedSoulStones = dungeonEquilibrium * dungeonSoulStones + this.predictions["Mine Soulstones"].loopsCompleted;
       let soulStonesPerMinute = expectedSoulStones / totalTicks * 60;
