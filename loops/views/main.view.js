@@ -485,8 +485,8 @@ function View() {
             document.getElementById(`actionTooltip${index}`).style.display = isShowing ? "inline-block" : "none";
         }
         nextActionsDiv.style.display = isShowing ? "none" : "inline-block";
-	document.getElementById(`actionTooltipContainer`).style.width = nextActionWidth;
         document.getElementById("actionTooltipContainer").style.display = isShowing ? "inline-block" : "none";
+	    document.getElementById(`actionTooltipContainer`).style.width = nextActionWidth;
         view.updateCurrentActionBar(index);
     };
 
