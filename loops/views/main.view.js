@@ -486,7 +486,7 @@ function View() {
         }
         nextActionsDiv.style.display = isShowing ? "none" : "inline-block";
         document.getElementById("actionTooltipContainer").style.display = isShowing ? "inline-block" : "none";
-	    document.getElementById("nextActionsListContainer").style.width = nextActionWidth + "px";
+	    document.getElementById("actionTooltipContainer").style.width = nextActionWidth + "px";
         view.updateCurrentActionBar(index);
     };
 
