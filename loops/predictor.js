@@ -883,7 +883,7 @@ const Koviko = {
       if ( !(Number.isNaN(snapshots.currProgress.attributes["Large Dungeon"].value)) ) { dungeonSoulStones += snapshots.currProgress.attributes["Large Dungeon"].value * 10 };
 	    console.log(dungeonSoulStones);
 	    console.log(Number.isNaN(snapshots.currProgress.attributes["Large Dungeon"].value));
-	    console.log(snapshots.currProgress.attributes["Small Dungeon"].value);
+	    console.log(snapshots.currProgress.attributes["Large Dungeon"].value);
       // let dungeonSoulStones = snapshots.currProgress.attributes["Small Dungeon"].value + snapshots.currProgress.attributes["Large Dungeon"].value * 10;
       let expectedSoulStones = dungeonEquilibrium * dungeonSoulStones + this.predictions["Mine Soulstones"].loopsCompleted;
       let soulStonesPerMinute = expectedSoulStones / totalTicks * 60;
