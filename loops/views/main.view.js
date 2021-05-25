@@ -267,6 +267,7 @@ function View() {
         "rgba(96, 125, 139, 0.2)",
         "rgba(255, 255, 255, 0.2)",
         "rgba(103, 58, 183, 0.2)"
+	    "rgba(255, 50, 50, 0.2)"
     ];
     this.updateNextActions = function() {
         let count = 0;
@@ -339,7 +340,7 @@ function View() {
             }
             let color;
             if (action.name === "Face Judgement") {
-                color = "linear-gradient(to bottom, rgb(183, 203, 196) 49%, transparent 51%), linear-gradient(to right, rgba(255, 255, 255, 0.2) 33%, rgba(103, 58, 183, 0.2) 34% 66%, rgba(255, 152, 0, 0.2) 67%)";
+                color = "linear-gradient(to bottom, rgb(183, 203, 196) 49%, transparent 51%), linear-gradient(to right, rgba(255, 255, 255, 0.2) 33%, rgba(255, 50, 50, 0.2) 34% 66%, rgba(103, 58, 183, 0.2) 67%)";
             } else if (action.name === "Fall From Grace") {
 				color = "linear-gradient(to bottom, rgb(255, 255, 255, 0.2) 49%, rgba(255, 152, 0, 0.2) 51%)";
 			} else if (action.name === "Open Rift") {
