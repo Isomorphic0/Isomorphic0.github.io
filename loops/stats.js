@@ -97,11 +97,11 @@ function getBuffLevel(buff) {
 }
 
 function getSelfCombat() {
-    return (getSkillLevel("Combat") + getSkillLevel("Pyromancy") * 5 + getSkillLevel("Restoration") * 2) * (1 + ((resources.armor + 3 * resources.enchantments) * getCraftGuildRank().bonus) / 5);
+    return (getSkillLevel("Combat") + getSkillLevel("Pyromancy") * 5) * (1 + ((resources.armor + 3 * resources.enchantments) * getCraftGuildRank().bonus) / 5);
 }
 
 function getTeamCombat() {
-    return getSelfCombat("Combat") + getSkillLevel("Combat") * (resources.teamMembers / 2) * getAdvGuildRank().bonus;
+    return getSelfCombat("Combat") + getSkillLevel("Restoration") * 2 + resources.zombies * 0.5 * getSkillLevel("Dark Magic") + (getSkillLevel("Combat") + getSkillLevel("Restoration") * 2) * (resources.teamMembers / 2) * getAdvGuildRank().bonus;
 }
 
 function getPrcToNextSkillLevel(skill) {
