@@ -101,7 +101,7 @@ function getSelfCombat() {
 }
 
 function getTeamCombat() {
-    return getSelfCombat("Combat") + getSkillLevel("Restoration") * 2 + resources.zombies * 0.5 * getSkillLevel("Dark Magic") + (getSkillLevel("Combat") + getSkillLevel("Restoration") * 2) * (resources.teamMembers / 2) * getAdvGuildRank().bonus;
+    return getSelfCombat("Combat") + getSkillLevel("Restoration") * 2 + resources.zombies * 0.5 * getSkillLevel("Dark") + (getSkillLevel("Combat") + getSkillLevel("Restoration") * 2) * (resources.teamMembers / 2) * getAdvGuildRank().bonus;
 }
 
 function getPrcToNextSkillLevel(skill) {
