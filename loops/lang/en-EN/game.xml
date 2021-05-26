@@ -1921,7 +1921,7 @@
         </raise_zombie>
 	<!--town 7-->
 	<explore_shadow_realm>
-	    <label>Explore Shadow Realm</label>
+	    <label>Explore Realm</label>
 	    <label_done>Realm Explored</label_done>
 	    <tooltip><![CDATA[
             See what lurks in the shadows
