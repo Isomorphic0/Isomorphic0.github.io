@@ -3988,7 +3988,7 @@ Action.Oracle = new Action("Oracle", {
 });
 
 Action.WingedSteed = new Action("Winged Steed", {
-	type: "normal",
+	tytpe: "normal",
 	expMult: 1,
 	townNum: 4,
 	stats: {
