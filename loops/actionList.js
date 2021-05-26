@@ -4112,7 +4112,7 @@ Action.FallFromGrace = new Action("Fall From Grace", {
         Dex: 0.4,
         Luck: 0.3,
         Spd: 0.2,
-        Int: 0.1,
+        Int: 0.1
     },
     allowed() {
         return 1;
@@ -4170,13 +4170,12 @@ Action.RaiseZombie = new Action("Raise Zombie", {
 	stats: {Con: 0.2,
 		Int: 0.3,
 		Soul: 0.5
-	},
+	       },
 	manaCost() {
 		return 4000;
 	},
 	finish() {
-		addResource("zombies", -1);
-		addResource("teamMembers", 1);
+		addResource("zombies", 1);
 		updateTeamCombat()
 	},
 });
