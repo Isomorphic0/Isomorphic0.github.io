@@ -4112,7 +4112,7 @@ Action.FallFromGrace = new Action("Fall From Grace", {
         Dex: 0.4,
         Luck: 0.3,
         Spd: 0.2,
-        Int: 0.1
+        Int: 0.1,
     },
     allowed() {
         return 1;
