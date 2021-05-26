@@ -3988,7 +3988,7 @@ Action.Oracle = new Action("Oracle", {
 });
 
 Action.WingedSteed = new Action("Winged Steed", {
-	tytpe: "normal",
+	type: "normal",
 	expMult: 1,
 	townNum: 4,
 	stats: {
@@ -4112,7 +4112,7 @@ Action.FallFromGrace = new Action("Fall From Grace", {
         Dex: 0.4,
         Luck: 0.3,
         Spd: 0.2,
-        Int: 0.1,
+        Int: 0.1
     },
     allowed() {
         return 1;
@@ -4161,6 +4161,30 @@ Action.ExploreShadow = new Action("Explore Shadow Realm", {
     },
 });
 
+/* Action.RaiseZombie = new Action("Raise Zombie", {
+	type: "normal",
+	expMult: 1,
+	townNum: 5,
+	varName: "RaiseZombie",
+	
+	stats: {Con: 0.2,
+		Int: 0.3,
+		Soul: 0.5
+	       },
+	manaCost() {
+		return 4000;
+	},
+	visible() {
+            return true;
+	},
+	unlocked() {
+            return true;
+	},
+	finish() {
+		addResource("zombies", 1);
+	},
+});
+*/
 // town 7
 Action.TheSpire = new DungeonAction("The Spire", 2, {
     type: "multipart",
