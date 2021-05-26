@@ -423,6 +423,11 @@
             <id>land</id>
             <desc>(Incomplete)</desc>
         </resource>
+	<resource initially_hidden="true">
+            <title>Zombies:</title>
+            <id>zombies</id>
+            <desc>Undead thralls, brought back to fight for you.</desc>
+        </resource>
         <!--singular items with img icons rather than counts-->
         <resource initially_hidden="true" no_count="true">
             <title><![CDATA[<img src="img/buyGlasses.svg" class="smallIcon">]]></title>
