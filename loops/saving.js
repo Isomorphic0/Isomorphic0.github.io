@@ -52,6 +52,7 @@ let resources = {
 	favors: 0,
 	enchantments: 0,
 	land: 0,
+	zombies: 0,
     glasses: false,
     supplies: false,
     pickaxe: false,
