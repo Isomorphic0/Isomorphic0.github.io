@@ -266,7 +266,7 @@ function View() {
         "rgba(255, 235, 59, 0.2)",
         "rgba(96, 125, 139, 0.2)",
         "rgba(255, 255, 255, 0.2)",
-        "rgba(103, 58, 183, 0.2)"
+        "rgba(103, 58, 183, 0.2)",
 	    "rgba(255, 50, 50, 0.2)"
     ];
     this.updateNextActions = function() {
