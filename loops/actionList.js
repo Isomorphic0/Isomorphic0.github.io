@@ -4161,7 +4161,7 @@ Action.ExploreShadow = new Action("Explore Shadow Realm", {
     },
 });
 
-/* Action.RaiseZombie = new Action("Raise Zombie", {
+Action.RaiseZombie = new Action("Raise Zombie", {
 	type: "normal",
 	expMult: 1,
 	townNum: 5,
@@ -4184,7 +4184,7 @@ Action.ExploreShadow = new Action("Explore Shadow Realm", {
 		addResource("zombies", 1);
 	},
 });
-*/
+
 // town 7
 Action.TheSpire = new DungeonAction("The Spire", 2, {
     type: "multipart",
