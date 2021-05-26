@@ -422,6 +422,11 @@
             <title>Land:</title>
             <id>land</id>
             <desc>(Incomplete)</desc>
+	</resource>
+	<resource initially_hidden="true">
+            <title>Zombies:</title>
+            <id>zombies</id>
+            <desc>Undead thralls, brought back to fight for you.</desc>
         </resource>
         <!--singular items with img icons rather than counts-->
         <resource initially_hidden="true" no_count="true">
@@ -1921,6 +1926,7 @@
 	    <tooltip><![CDATA[
             See what lurks in the shadows
 	]]></tooltip>
+	</explore_shadow_realm>
         <the_spire>
             <label>The Spire</label>
             <label_done>Looted</label_done>
