@@ -3988,7 +3988,7 @@ Action.Oracle = new Action("Oracle", {
 });
 
 Action.WingedSteed = new Action("Winged Steed", {
-	tytpe: "normal",
+	type: "normal",
 	expMult: 1,
 	townNum: 4,
 	stats: {
@@ -4160,6 +4160,26 @@ Action.ExploreShadow = new Action("Explore Shadow Realm", {
         towns[5].finishProgress(this.varName, 100 * (resources.glasses ? 2 : 1));
     },
 });
+
+Action.RaiseZombie = new Action("Raise Zombie", {
+	type: "normal",
+	expMult: 1,
+	townNum: 5,
+	varName: "RaiseZombie",
+	
+	stats: {Con: 0.2,
+		Int: 0.3,
+		Soul: 0.5
+	},
+	manaCost() {
+		return 4000;
+	},
+	finish() {
+		addResource("zombies", -1);
+		addResource("teamMembers", 1);
+		updateTeamCombat()
+	},
+}};
 
 // town 7
 Action.TheSpire = new DungeonAction("The Spire", 2, {
