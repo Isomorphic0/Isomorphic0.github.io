@@ -4179,7 +4179,7 @@ Action.RaiseZombie = new Action("Raise Zombie", {
 		addResource("teamMembers", 1);
 		updateTeamCombat()
 	},
-}};
+});
 
 // town 7
 Action.TheSpire = new DungeonAction("The Spire", 2, {
