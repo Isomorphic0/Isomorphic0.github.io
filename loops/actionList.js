@@ -4176,13 +4176,12 @@ Action.RaiseZombie = new Action("Raise Zombie", {
 	},
 	visible() {
             return true;
-        },
-        unlocked() {
+	},
+	unlocked() {
             return true;
 	},
 	finish() {
 		addResource("zombies", 1);
-		updateTeamCombat()
 	},
 });
 
