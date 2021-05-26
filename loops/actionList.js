@@ -4174,6 +4174,12 @@ Action.RaiseZombie = new Action("Raise Zombie", {
 	manaCost() {
 		return 4000;
 	},
+	visible() {
+            return true;
+        },
+        unlocked() {
+            return true;
+	},
 	finish() {
 		addResource("zombies", 1);
 		updateTeamCombat()
