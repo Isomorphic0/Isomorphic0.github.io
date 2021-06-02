@@ -613,6 +613,9 @@ const Koviko = {
           r.gold += r.temp12 <= towns[4].goodDonations ? 20 : 0;
           r.rep--;
          }},
+	 'Sell Artifact': { affected: ['gold', 'artifacts'], effect: (r) => (r.gold += 50, r.artifacts -= 1) },
+	 'Gift Artifact': { affected: ['gold', 'artifacts'], effect: (r) => (r.artifacts -= 1) },
+	 'Mercantilism': { effect: (r, k) => k.mercantilism += 100 },
          'Seek Citizenship': {},
 
         // Loops without Max
