@@ -497,7 +497,7 @@ const Koviko = {
         }},
         'Buy Glasses': { effect: (r) => (r.gold -= 10, r.glasses = true) },
         'Buy Mana': { affected: ['mana', 'gold'], effect: (r) => (r.mana += r.gold * 50, r.gold = 0) },
-        'Buy Mana Z1': { affected: ['mana', 'gold'], effect: (r) => (r.mana += r.gold * 50, r.gold = 0) },
+        'Buy Mana Z1': { affected: ['mana', 'gold'], effect: (r) => (r.mana += r.gold * 50 * g.Action.BuyManaZ1.goldCost(), r.gold = 0) },
         'Meet People': {},
         'Train Strength': {},
         'Short Quest': { affected: ['gold'], effect: (r) => {
@@ -555,7 +555,7 @@ const Koviko = {
         }},
         'Get Drunk': { affected: ['rep'], canStart: (input) => (input.rep >= -3), effect: (r) => r.rep-- },
         'Purchase Mana': { affected: ['mana', 'gold'], effect: (r) => (r.mana += r.gold * 50, r.gold = 0) },
-        'Buy Mana Z3': { affected: ['mana', 'gold'], effect: (r) => (r.mana += r.gold * 50, r.gold = 0) },
+        'Buy Mana Z3': { affected: ['mana', 'gold'], effect: (r) => (r.mana += r.gold * 50 * g.Action.BuyManaZ3.goldCost(), r.gold = 0) },
         'Sell Potions': { affected: ['gold', 'potions'], effect: (r, k) => (r.gold += r.potions * g.getSkillLevelFromExp(k.alchemy), r.potions = 0) },
         'Read Books': {},
         'Gather Team': { affected: ['gold'], effect: (r) => (r.team = (r.team || 0) + 1, r.gold -= r.team * 100) },
@@ -606,7 +606,7 @@ const Koviko = {
         'Fall From Grace': {},
         'Guided Tour': { affected: ['gold'], canStart: (input) => (input.gold >= 10), effect: (r) => (r.gold -= 10) },
         'Canvass': {},
-        'Buy Mana Z5': { affected: ['mana', 'gold'], effect: (r) => (r.mana += r.gold * 50, r.gold = 0) },
+        'Buy Mana Z5': { affected: ['mana', 'gold'], effect: (r) => (r.mana += r.gold * 50 * g.Action.BuyManaZ5.goldCost(), r.gold = 0) },
         'Donate': { affected: ['gold', 'rep'], effect: (r) => (r.gold -= 20, r.rep +=1) },
         'Accept Donations': { affected: ['gold'], effect: (r) => {
           r.temp12 = (r.temp12 || 0) + 1;
