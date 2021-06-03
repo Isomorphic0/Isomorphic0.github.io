@@ -616,6 +616,8 @@ const Koviko = {
 	 'Sell Artifact': { affected: ['gold', 'artifacts'], effect: (r) => (r.gold += 50, r.artifacts -= 1) },
 	 'Gift Artifact': { affected: ['gold', 'artifacts'], effect: (r) => (r.artifacts -= 1) },
 	 'Mercantilism': { effect: (r, k) => k.mercantilism += 100 },
+	 'Restoration': { effect: (r, k) => k.restoration += 100 },
+	 'Spatiomancy': { effect: (r, k) => k.spatiomancy += 100 },
          'Seek Citizenship': {},
 
         // Loops without Max
