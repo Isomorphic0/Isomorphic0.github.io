@@ -473,7 +473,7 @@ const Koviko = {
          * @return {number} Combat skill of the team members
          * @memberof Koviko.Predictor#helpers
          */
-        getTeamCombat: (r, k) => h.getSelfCombat(r, k) + g.getSkillLevelFromExp(k.combat) * (r.team || 0) / 2 * h.getGuildRankBonus(r.adventures || 0),
+        getTeamCombat: (r, k) => h.getSelfCombat(r, k) + g.getSkillLevelFromExp(k.restoration) * (2 + (r.team || 0))/ 2 + g.getSkillLevelFromExp(k.combat) * (r.team || 0) / 2 * h.getGuildRankBonus(r.adventures || 0),
       });
 
       // Alias the globals to a shorter variable name
