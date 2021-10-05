@@ -1,61 +1,32 @@
-@font-face {
-  font-family: Typewriter;
-  src: url('MonospaceTypewriter.ttf');
-}
-html {
-  font-size: 62.5%;
-  box-sizing: border-box;
-}
-
-body {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  font-family: Typewriter, serif;
-  background-color: #212121;
-  color: #bbb;
-  font-size: 1.4rem;
-}
-
 .input-container {
-  display: flex;
-  flex-direction: row;
+  display: inline-block;
+  align-items:center;
+  justify-content: center;
+  width: auto;
 }
 
-.stat-display {
-  display:flex;
-  flex-direction: row;
-}
-
-.number-input {
-  margin-right: .5rem;
-  margin-bottom: 1.5rem;
-}
-
-.footer {
-  position: absolute;
-  bottom: 10px;
-  right: 10px;
-  align-self: flex-end;
-}
-
-.source-link {
-  color: #a8a7a8;
-  text-decoration: none;
-}
-
-.source-link:hover, .source-link:active {
-  text-decoration: underline;
+.input-box {
+  display: inline-block;
+  margin: 0 auto;
 }
 
 .content-text {
-  max-width: 70%;
   text-align: center;
 }
 
+.stat-container {
+  width: auto;
+  margin-left: 100px;
+  margin-bottom: 10px;
+}
 
-@font-face {
-    font-family: Typewriter;
-    src: url('MonospaceTypewriter.ttf');
+.stat-text {
+  width: 150px;
+  display: inline-block;
+}
+
+.stat-number {
+  width: 50px;
+  display: inline-block;
+  text-align: left;
 }
