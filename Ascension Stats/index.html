@@ -1,4 +1,3 @@
-
 <html lang="en">
 <head>
   <meta charset="utf-8"/>
@@ -12,14 +11,89 @@
   <p class="content-text">
     Enter the mob's name and floor here.
   </p>
-  <div id="inputContainer" class="input-container">
-    Mob:<input id="MobName" class="number-input" onchange="updateMob()">
-    Floor:
-    <input id="floor" type="number" class="number-input" oninput="updateStats()" />
+  <div id="inputs" style="width: 100%;text-align: center;">
+  <div id="mobInputContainer" class="input-container">
+    Mob:   <input id="MobName" class="input-box" onchange="updateMob()">
   </div>
-  <div id="agiContainer" class="stat-display">
-    <span id="agi">
-    </span>
+  <div id="floorInputContainer" class="input-container"> 
+    Floor:   <input id="floor" type=number  style="width:50px;" class="input-box" size="2" min=1 max = 100 oninput="updateStats()" />
   </div>
+  </div>
+  <div id="mobInfoContainer" style="width: auto; padding-top: 100px">
+    <div id="statContainer" style="width: 30%;" class="stat-display">
+      <div id="vit" class="stat-container">
+        <div id="vitText" class="stat-text">Vitality:
+        </div>
+        <div id="vitNumber" class="stat-number">
+        </div>
+      </div>
+      <div id="str" class="stat-container">
+        <div id="strText" class="stat-text">Strength:
+        </div>
+        <div id="strNumber" class="stat-number">
+        </div>
+      </div>
+      <div id="int" class="stat-container">
+        <div id="intText" class="stat-text">Intelligence:
+        </div>
+        <div id="intNumber" class="stat-number">
+        </div>
+      </div>
+      <div id="cha" class="stat-container">
+        <div id="chaText" class="stat-text">Chance:
+        </div>
+        <div id="chaNumber" class="stat-number">
+        </div>
+      </div>
+      <div id="agi" class="stat-container">
+        <div id="agiText" class="stat-text">Agility:
+        </div>
+        <div id="agiNumber" class="stat-number">
+        </div>
+      </div>
+      <div id="dam" class="stat-container">
+        <div id="damText" class="stat-text">Flat Damage:
+        </div>
+        <div id="damNumber" class="stat-number">
+        </div>
+      </div>
+      <div id="lock" class="stat-container">
+        <div id="lockText" class="stat-text">Lock:
+        </div>
+        <div id="lockNumber" class="stat-number">
+        </div>
+      </div>
+      <div id="apRed" class="stat-container">
+        <div id="apRedText" class="stat-text">AP Reduction:
+        </div>
+        <div id="apRedNumber" class="stat-number">
+        </div>
+      </div>
+      <div id="apParry" class="stat-container">
+        <div id="apParryText" class="stat-text">AP Parry:
+        </div>
+        <div id="apParryNumber" class="stat-number">
+        </div>
+      </div>
+      <div id="mpRed" class="stat-container">
+        <div id="mpRedText" class="stat-text">MP Reduction:
+        </div>
+        <div id="mpRedNumber" class="stat-number">
+        </div>
+      </div>
+      <div id="mpParry" class="stat-container">
+        <div id="mpParryText" class="stat-text">MP Parry:
+        </div>
+        <div id="mpParryNumber" class="stat-number">
+        </div>
+      </div>
+      <div id="ini" class="stat-container">
+        <div id="iniText" class="stat-text">Initiative:
+        </div>
+        <div id="iniNumber" class="stat-number">
+        </div>
+      </div>
+    </div>
+  <div>
 </body>
 </html>
