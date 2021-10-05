@@ -6,7 +6,7 @@ const GetFloor = function() {
   
 };
 
-function UpdateStats() {
+function updateStats() {
   
   const floor = document.getElementById("floor").value;
   
@@ -14,4 +14,4 @@ function UpdateStats() {
   
 }
 
-function UpdateMobs() {}
+function updateMobs() {}
