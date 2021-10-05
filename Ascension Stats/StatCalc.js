@@ -6,8 +6,12 @@ const GetFloor = function() {
   
 };
 
-const UpdateStats = function() {
+function UpdateStats() {
   
-  document.getElementById("agi").textContent = GetFloor().ToString
+  const floor = document.getElementById("floor").value;
+  
+  document.getElementById("agi").textContent = floor.ToString;
   
 }
+
+function UpdateMobs() {}
